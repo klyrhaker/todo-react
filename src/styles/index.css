@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: rgb(119, 137, 137);
+}
+.todo {
+  border: 2px red solid;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  gap: 20px;
+}
+.todo__info {
+  border: 2px solid red;
+}
+.todo__field {
+  border: 2px solid red;
+}
+ul {
+  border: 2px solid red;
+}
