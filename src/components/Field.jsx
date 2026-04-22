@@ -1,7 +1,7 @@
 const Field = (props) => {
-  const { className = "", id, label, value, onChange } = props;
+  const { className = "", id, label, type, onChange, value } = props;
   return (
-    <div className={`todo__field ${className}`}>
+    <div className={`field ${className}`}>
       <label className="field__label" htmlFor={id}>
         {label}
       </label>
@@ -10,6 +10,7 @@ const Field = (props) => {
         id={id}
         placeholder=" "
         autoComplete="off"
+        type={type}
         value={value}
         onChange={onChange}
       />

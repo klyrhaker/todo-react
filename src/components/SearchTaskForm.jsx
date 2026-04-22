@@ -1,18 +1,16 @@
-const SearchTaskForm = () => {
+import Field from "./Field";
+
+const SearchTaskForm = ({ onSearchInput, valueSearch }) => {
   return (
     <form className="todo__form">
-      <div className="todo__field field">
-        <label className="field__label" htmlFor="search-task">
-          Search Task
-        </label>
-        <input
-          className="field__input"
-          id="search-task"
-          placeholder=" "
-          autoComplete="off"
-          type="search"
-        />
-      </div>
+      <Field
+        label="Search task"
+        className="todo__field"
+        id="search-task"
+        type="search"
+        onChange={onSearchInput}
+        value={valueSearch}
+      />
     </form>
   );
 };

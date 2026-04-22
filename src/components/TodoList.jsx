@@ -1,12 +1,20 @@
 import TodoItem from "./TodoItem";
 
-const TodoList = () => {
-  const hasTasks = true;
-  if (!hasTasks) return <div className="todo__empty-message"></div>;
+const TodoList = ({ tasks, onDeleteItem, onDone }) => {
+  if (!tasks.length) return <div className="todo__empty-message"></div>;
   return (
     <ul className="todo__list">
-      <TodoItem />
-      <li className="todo__item todo-item"></li>
+      {tasks.map((task) => (
+        <TodoItem
+          key={task.id}
+          className="todo__item"
+          id={task.id}
+          title={task.title}
+          isDone={task.isDone}
+          onDeleteItem={onDeleteItem}
+          onDone={onDone}
+        />
+      ))}
     </ul>
   );
 };
